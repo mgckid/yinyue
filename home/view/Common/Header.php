@@ -22,7 +22,7 @@
     swfobject.embedSWF("/static/home/images/7.swf", "topbanner", "419", "139", "6.0.65.0", "/static/home/js/expressInstall.swf", params, attributes);
     $(function(){
         var myNav =$("#menunav a"),i;
-        for(i=0;i<myNav.length;i++){
+        for(i=1;i<myNav.length;i++){
             var links = myNav.eq(i).attr("href"),myURL = document.URL;
             if(myURL.indexOf(links) != -1) {
                 myNav.eq(i).attr('class','menuhover');
