@@ -1,7 +1,15 @@
-<div class="maintop" style="background: url("<?=$index_top_lunbo[0]['image_url']?>")"><p id="topbanner"></p></div>
+<style>
+    .maintop {
+        height: 350px;
+        text-align: center;
+        background: url("<?=$adList['index_top_lunbo'][0]['image_url']?>") no-repeat;
+        background-position: center top;
+    }
+</style>
+<div class="maintop"  ><p id="topbanner"></p></div>
 <div class="topmenu">
     <div class="nav" id="menunav">
-        <a href="index.html">首 页</a>
+        <a href="<?=C('HOME_URL')?>">首 页</a>
         <?php foreach ($navList as $value):?>
         <a href="<?= $value['cate_type'] == 30 ? $value['jump_url'] : U('Index/category', array('cate' => $value['alias'])) ?>"><?= $value['name'] ?></a>
         <?php endforeach;?>

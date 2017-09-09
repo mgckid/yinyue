@@ -15,6 +15,7 @@ use app\model\FlinkModel;
 use houduanniu\base\Controller;
 use houduanniu\base\View;
 use houduanniu\base\Application;
+use app\model\AdvertisementListModel;
 
 class BaseController extends Controller
 {
@@ -95,8 +96,8 @@ class BaseController extends Controller
             $filed = 'id,pid,name,alias,jump_url,cate_type,sort';
             $result = $cateModel->getColumnList($condition, $filed);
             $navList = treeStructForLayer($result);
-            $sort = array_column($navList,'sort');
-            array_multisort($sort,SORT_ASC,$navList);
+            $sort = array_column($navList, 'sort');
+            array_multisort($sort, SORT_ASC, $navList);
             $reg['navList'] = $navList;
         }
         #友情链接
@@ -113,6 +114,26 @@ class BaseController extends Controller
         View::addData($reg);
         View::setViewDir(__PROJECT__ . '/' . strtolower(Application::getModule()) . '/' . C('DIR_VIEW'));
         View::display($view, $data);
+    }
+
+    /**
+     * 获取网站全站广告
+     * @access protected
+     * @author furong
+     * @return array
+     * @since 2017年3月12日 11:33:38
+     * @abstract
+     */
+    protected function getSiteAllAdvertisement()
+    {
+        $model = new AdvertisementListModel();
+        $list = $model->getAdvertisementList([], 0, 999, false, 'al.*,ap.position_name,ap.position_key');
+        $data = [];
+        foreach ($list as $value) {
+            $value['image_url'] = getImage($value['ad_image']);
+            $data[$value['position_key']][] = $value;
+        }
+        return $data;
     }
 
 

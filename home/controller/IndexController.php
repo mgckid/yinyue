@@ -233,7 +233,7 @@ class IndexController extends BaseController
     {
         $categoryName = $cateInfo['alias'];
         $p = isset($_GET['p']) && !empty($_GET['p']) ? intval($_GET['p']) : 1;
-        $pageSize = 10;
+        $pageSize = 15;
 
         $reg = [];
         $reg['cateInfo'] = $cateInfo;
@@ -301,25 +301,7 @@ class IndexController extends BaseController
         $this->display('Index/catePage', $reg, $seoInfo);
     }
 
-    /**
-     * 获取网站全站广告
-     * @access protected
-     * @author furong
-     * @return array
-     * @since 2017年3月12日 11:33:38
-     * @abstract
-     */
-    protected function getSiteAllAdvertisement()
-    {
-        $model = new AdvertisementListModel();
-        $list = $model->getAdvertisementList([], 0, 999, false, 'al.*,ap.position_name,ap.position_key');
-        $data = [];
-        foreach ($list as $value) {
-            $value['image_url'] = getImage($value['ad_image']);
-            $data[$value['position_key']][] = $value;
-        }
-        return $data;
-    }
+
 
     /**
      * 统计阅读数
