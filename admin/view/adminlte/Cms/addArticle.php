@@ -171,7 +171,7 @@
                 success: function (data) {
                     layer.alert(data.msg)
                     if (data.status == 1) {
-                        // window.location.href = '<?= U('Cms/articleList') ?>';
+                         window.history.go(-1)
                     }
                 }
             })

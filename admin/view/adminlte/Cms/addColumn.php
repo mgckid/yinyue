@@ -33,7 +33,7 @@
                     <label class="col-sm-2 control-label">排列顺序</label>
 
                     <div class="col-sm-10">
-                        <input type="text" name="sort" class="form-control" value="100" value="<?= $info['sort'] ?>" placeholder="点击输入排列顺序">
+                        <input type="text" name="sort" class="form-control"   value="<?= $info['sort'] ?>" placeholder="点击输入排列顺序">
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@
             success: function (data) {
                 layer.alert(data.msg)
                 if (data.status == 1) {
-                   // window.location.href = '<?= U('Cms/index') ?>';
+                    window.history.go(-1);
                 }
             }
         })
