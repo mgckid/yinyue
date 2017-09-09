@@ -1,7 +1,7 @@
 <?php $this->layout('Layout/home');?>
 <div class="maindiv">
     <div class="bigcontent">
-        <p style="height:30px;line-height:30px;border-bottom:1px solid #CCC;padding-left:10px;margin-bottom:10px">赛事资讯>>正文浏览</p>
+        <p style="height:30px;line-height:30px;border-bottom:1px solid #CCC;padding-left:10px;margin-bottom:10px"><?=$cateInfo['name']?>>>正文浏览</p>
         <h2 align="center"><?=$info['title']?></h2>
         <div class="newspub">发布时间：<?=date('Y/m/d',strtotime($info['public_time']))?> 浏览次数：<?=$info['click']?></div>
         <?=htmlspecialchars_decode($info['content'])?>

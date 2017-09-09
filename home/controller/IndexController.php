@@ -320,7 +320,8 @@ class IndexController extends BaseController
                 'description' => $cateInfo['keyword']
             ];
         }
-        $this->display('Index/catePage', $reg, $seoInfo);
+        $template = !empty($cateInfo['list_template'])?$cateInfo['list_template']:'Index/catePage';
+        $this->display($template, $reg, $seoInfo);
     }
 
 
