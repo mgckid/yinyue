@@ -25,22 +25,43 @@ class IndexController extends BaseController
         $p = isset($_GET['p']) && !empty($_GET['p']) ? intval($_GET['p']) : 1;
         $pageSize = 10;
         $reg = [];
-        #获取最近更新
+        $postModel = new CmsPostModel();
+        $categoryModel = new CmsCategoryModel();
+        #获取赛事掠影数据
         {
-            $postModel = new CmsPostModel();
-            $tagModel = new CmsTagModel();
-            $count = $postModel->getArticleList([], '', '', true);
-            $page = new Page($count, $p, $pageSize);
-            $field = 'a.id,a.title,a.title_alias,a.description,public_time,image_name,editor,click,c.name as category,c.alias as category_alias';
-            $result = $postModel->getArticleList([], $page->getOffset(), $page->getPageSize(), false, $field);
-            foreach ($result as $key => $value) {
-                $tags = $tagModel->getTagByPostId($value['id']);
-                $value['tags'] = $tags ? array_column($tags, 'tag_name') : [];
-                $value['image_url'] = $value['image_name'] ? getImage($value['image_name'], $this->imageSize[1]) : '';
-                $result[$key] = $value;
-            }
-            $reg['latestList'] = $result;
-            $reg['pages'] = $page->getPageStruct();
+            $condition = [
+                'where' => ['c.id', 7],
+            ];
+            $result = $postModel->getArticleList($condition,0,10);
+            $reg['photo'] = $result;
+        }
+        #获取赛事资讯数据
+        {
+            $condition = [
+                'where' => ['c.id', 1],
+            ];
+            $result = $postModel->getArticleList($condition,0,6);
+            $reg['news'] = $result;
+        }
+        #获取赛事简介数据
+        {
+            $reg['introduce'] = $categoryModel->getCateInfoById(8);
+        }
+        #获取报名方式数据
+        {
+            $reg['registration'] = $categoryModel->getCateInfoById(9);
+        }
+        #获取报名方式数据
+        {
+            $reg['rule'] = $categoryModel->getCateInfoById(5);
+        }
+        #获取获奖选手奖金数据
+        {
+            $reg['price'] = $categoryModel->getCateInfoById(10);
+        }
+        #获取组织机构数据
+        {
+            $reg['construct'] = $categoryModel->getCateInfoById(11);
         }
         #seo信息
         {
@@ -265,7 +286,8 @@ class IndexController extends BaseController
                 'description' => $cateInfo['keyword']
             ];
         }
-        $this->display('Index/cateList', $reg, $seoInfo);
+        $template = !empty($cateInfo['list_template'])?$cateInfo['list_template']:'Index/cateList';
+        $this->display($template, $reg, $seoInfo);
     }
 
     /**

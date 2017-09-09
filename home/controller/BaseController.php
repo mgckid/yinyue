@@ -111,6 +111,10 @@ class BaseController extends Controller
             $adList = $this->getSiteAllAdvertisement();
             $reg['adList'] = $adList;
         }
+        #获取微信微博数据
+        {
+            $reg['weixin'] = $cateModel->getCateInfoById(12);
+        }
         View::addData($reg);
         View::setViewDir(__PROJECT__ . '/' . strtolower(Application::getModule()) . '/' . C('DIR_VIEW'));
         View::display($view, $data);

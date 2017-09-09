@@ -22,14 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="mainright" id="mainright"> <a href="/static/home/images/20160413161310411.doc" target="_blank"><img src="/static/home/images/downfile.gif" width="277" height="98" class="mainrdown" /></a>
-        <div class="mainrtit">
-            <h3><img src="/static/home/images/email.gif" width="16" height="17" />联系我们</h3></div>
-        <div class="maininfo">
-            电话：151-5887-4292 唐老师 <br />
-            E-Mail：tangchaow@foxmail.com<br />
-            新浪微博：wb<br />
-            官方微信：wx<br><img src='/static/home/images/20150119154937349.png'>
-        </div>
-    </div>
+    <!--侧边栏开始-->
+    <?=$this->insert('Common/mainright')?>
+    <!--侧边栏结束-->
 </div>
