@@ -25,11 +25,6 @@ class IndexController extends BaseController
         $p = isset($_GET['p']) && !empty($_GET['p']) ? intval($_GET['p']) : 1;
         $pageSize = 10;
         $reg = [];
-        #获取广告
-        {
-            $adList = $this->getSiteAllAdvertisement();
-            $reg['adList'] = $adList;
-        }
         #获取最近更新
         {
             $postModel = new CmsPostModel();

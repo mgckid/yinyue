@@ -92,9 +92,11 @@ class BaseController extends Controller
             $condition = [
                 'where' => array('nav_display', $cateModel::NAV_DISPLAY),
             ];
-            $filed = 'id,pid,name,alias,jump_url,cate_type';
+            $filed = 'id,pid,name,alias,jump_url,cate_type,sort';
             $result = $cateModel->getColumnList($condition, $filed);
             $navList = treeStructForLayer($result);
+            $sort = array_column($navList,'sort');
+            array_multisort($sort,SORT_ASC,$navList);
             $reg['navList'] = $navList;
         }
         #友情链接
@@ -102,6 +104,11 @@ class BaseController extends Controller
             $flinkModel = new FlinkModel();
             $result = $flinkModel->getFlinkList(0, 10);
             $reg['flink'] = $result;
+        }
+        #获取广告
+        {
+            $adList = $this->getSiteAllAdvertisement();
+            $reg['adList'] = $adList;
         }
         View::addData($reg);
         View::setViewDir(__PROJECT__ . '/' . strtolower(Application::getModule()) . '/' . C('DIR_VIEW'));
