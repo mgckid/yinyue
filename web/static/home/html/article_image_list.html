@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>意大利贝洛克国际声乐比赛中国预选赛--赛事掠影</title>
+    <link href="../css/css.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/lightbox.css">
+</head>
+<body>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script language="javascript" src="../js/swfobject.js"></script>
+<div class="maintop"><p id="topbanner"></p></div>
+<div class="topmenu">
+    <div class="nav" id="menunav"><a href="index.html">首 页</a><a href="zhangcheng.html">大赛章程</a><a
+            href="news.asp">赛事资讯</a><a href="filedown.asp">资料下载</a><a href="question.asp">常见问题</a><a href="ageen.html">官方授权</a><a
+            href="contact.html">联系我们</a></div>
+</div>
+<div class="clear"></div>
+<script language="javascript">
+    var params = {menu: 'false', quality: 'high', wmode: 'transparent', allowScriptAccess: 'always'};
+    var attributes = {id: 'top_star', name: 'top_star', wmode: 'transparent', allowScriptAccess: 'always'};
+    swfobject.embedSWF("../images/7.swf", "topbanner", "419", "139", "6.0.65.0", "../js/expressInstall.swf", params, attributes);
+    $(function () {
+        var myNav = $("#menunav a"), i;
+        for (i = 0; i < myNav.length; i++) {
+            var links = myNav.eq(i).attr("href"), myURL = document.URL;
+            if (myURL.indexOf(links) != -1) {
+                myNav.eq(i).attr('class', 'menuhover');
+            }
+        }
+        if (myURL.substr(myURL.length - 1, 1) == "/")myNav.eq(0).attr('class', 'menuhover');
+        AutoLFHeight();
+    })
+    //二级页面左右自动高度
+    function AutoLFHeight() {
+        var lh = $("#mainleft").height();
+        var rh = $("#mainright").height();
+        if (rh > lh)$("#mainleft").css("height", rh + "px");
+    }
+</script>
+
+<div class="maindiv">
+    <div class="mainleft" id="mainleft">
+        <div class="maintit">
+            <h3>赛事掠影</h3></div>
+        <div class="maininfo">
+            <div class='saiphoto'><a href='../images/20150212112333279.jpg' title='比赛实景' data-lightbox='saiimg'><img
+                    src=../images/20150212112333279.jpg></a><span>比赛实景</span></div>
+            <div class='saiphoto'><a href='../images/20150212112621911.jpg' title='赛事精彩瞬间' data-lightbox='saiimg'><img
+                    src=../images/20150212112621911.jpg></a><span>赛事精彩瞬间</span></div>
+            <div class='saiphoto'><a href='../images/20150212112526350.jpg' title='鲜花和掌声' data-lightbox='saiimg'><img
+                    src=../images/20150212112526350.jpg></a><span>鲜花和掌声</span></div>
+            <div class='saiphoto'><a href='../images/20150212112448507.jpg' title='选手合影留念' data-lightbox='saiimg'><img
+                    src=../images/20150212112448507.jpg></a><span>选手合影留念</span></div>
+            <div class='saiphoto'><a href='../images/20150212112409976.jpg' title='选手比赛照片' data-lightbox='saiimg'><img
+                    src=../images/20150212112409976.jpg></a><span>选手比赛照片</span></div>
+            <div class='saiphoto'><a href='../images/20150212112244922.jpg' title='比赛照片' data-lightbox='saiimg'><img
+                    src=../images/20150212112244922.jpg></a><span>比赛照片</span></div>
+            <div class='saiphoto'><a href='../images/20150212112206688.jpg' title='比赛照片' data-lightbox='saiimg'><img
+                    src=../images/20150212112206688.jpg></a><span>比赛照片</span></div>
+            <div class='clear'></div>
+            <p class='page'>首页 上一页 下一页 尾页　　页次:1/1页　共<font color=red>7</font>条记录　12条/每页</p>
+        </div>
+    </div>
+    <div class="mainright" id="mainright"><a href="../images/20160413161310411.doc" target="_blank"><img
+            src="../images/downfile.gif" width="277" height="98" class="mainrdown"/></a>
+
+        <div class="mainrtit">
+            <h3><img src="../images/email.gif" width="16" height="17"/>联系我们</h3></div>
+        <div class="maininfo">
+            电话：151-5887-4292 唐老师 <br/>
+            E-Mail：tangchaow@foxmail.com<br/>
+            新浪微博：wb<br/>
+            官方微信：wx<br><img src='../images/20150119154937349.png'>
+        </div>
+    </div>
+</div>
+<div class="mainbtm">地址：武汉市歌舞剧院&nbsp;武汉傲宇星姿文化传播有限公司版权所有&nbsp;鄂ICP备15001243号-1</div>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>
