@@ -1,4 +1,4 @@
-<?php $this->layout('Layout/Home');?>
+<?php $this->layout('Layout/home');?>
 <div class="maindiv">
     <div class="bigcontent">
         <p style="height:30px;line-height:30px;border-bottom:1px solid #CCC;padding-left:10px;margin-bottom:10px">赛事资讯>>正文浏览</p>

@@ -1,1 +1,1 @@
-<div class="mainbtm">地址：武汉市歌舞剧院&nbsp;武汉傲宇星姿文化传播有限公司版权所有&nbsp;鄂ICP备15001243号-1</div>
+<div class="mainbtm">地址：育才小学&nbsp;育才小学版权所有&nbsp;鄂ICP备xxxx <a href="http://blog.houduanniu.com">技术支持:后端牛</a></div>

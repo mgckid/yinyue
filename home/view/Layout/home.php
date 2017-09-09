@@ -2,9 +2,9 @@
 <html>
 <head lang="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>意大利贝洛克国际声乐比赛中国预选赛</title>
-    <meta name="keywords" content="武汉傲宇星姿，意大利贝洛克，意大利贝洛克国际声乐比赛，意大利贝洛克中国赛"/>
-    <meta name="description" content="意大利贝洛克国际声乐比赛中国预选赛由武汉傲宇星姿文化传播有限公司承办"/>
+    <title><?= $siteInfo['title']?></title>
+    <meta name="keywords" content="<?= $siteInfo['keyword']?>"/>
+    <meta name="description" content="<?= $siteInfo['description']?>"/>
     <link href="/static/home/css/css.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="/static/home/css/lightbox.css">
     <script src="/static/home/js/jquery-1.11.1.min.js"></script>
