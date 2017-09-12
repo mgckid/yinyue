@@ -17,13 +17,6 @@ return array(
     /*http请求设置 开始*/
     /* URL设置 */
     'URL_MODE' => 2, //url访问模式  0：默认动态url传参模式 1：pathinfo模式 2:兼容模式
-    /*子域名泛解析设置*/
-    'MAIN_DOMAIN' => 'yinyue.me',
-    'SUB_DOMAIN_OPEN' => true,
-    'SUB_DOMAIN_RULES' => [
-        'www' => 'home',
-        'admin' => 'admin',
-    ],
     /*http请求设置 结束*/
 
     /*自定义载入文件*/

@@ -13,6 +13,11 @@
     <script src="/static/home/js/jQuery-jcMarquee.js" type="text/javascript"></script>
 </head>
 <body>
+<style>
+    body {
+        background: url("<?=$adList['home_big_bg'][0]['image_url']?>") #231A1B top center no-repeat
+    }
+</style>
 <?php $this->insert('Common/header') ?>
 <?= $this->section('content'); ?>
 <?php $this->insert('Common/footer') ?>
