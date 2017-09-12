@@ -1,3 +1,4 @@
 upload
 /web/index.php
 .idea
+common/config/db.php
