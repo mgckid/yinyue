@@ -1,1 +1,1 @@
-<div class="mainbtm">地址：育才小学&nbsp;育才小学版权所有&nbsp;鄂ICP备xxxx <a href="http://blog.houduanniu.com">技术支持:后端牛</a></div>
+<div class="mainbtm">地址：武汉市武昌区文明路58号 中国武汉乐之音教育中心&nbsp;<?=$siteInfo['site_name']?>版权所有&nbsp; <a href="http://blog.houduanniu.com">技术支持:后端牛</a></div>
