@@ -18,12 +18,12 @@ input{BORDER:#CACAFF 1px solid;height:20px;line-height:20px;margin:0;padding-lef
 /*.bodytop{background:url(../imgs/bk.png) repeat-x}*/
 .maintop{height:350px;text-align:center;background:url("../images/top2-2016.png") no-repeat;background-position:center top;}
 .maintop p{margin:30px auto;}
-.maindiv{width:1000px;margin:5px auto;padding-left:10px;padding-top:10px;background:#F8F8F8;overflow:hidden}
+.maindiv{width:1000px;margin:5px auto;padding-left:10px;padding-top:10px;background:#F8F8F8;overflow:hidden;}
 .topmenu{height:52px;background:url("../images/menubk.png") bottom repeat-x}
 .nav{width:1010px;margin:0 auto;font-family:"Microsoft Yahei";font-size:18px;}
 .nav a{color:#FFF;width:112px;height:52px;line-height:52px;text-align:center;display:block;float:left;}
 .nav a:hover,.menuhover{background:url("../images/menubk-a.png") no-repeat;}
-.mainleft{width:700px;float:left;border-right:1px solid #CCC;padding-right:10px}
+.mainleft{width:700px;float:left;border-right:1px solid #CCC;padding-right:10px;min-height: 500px;}
 .mainright{width:280px;float:right;}
 .maintit{height:41px;background:url("../images/mtit2.png") no-repeat;margin-top:5px;margin-bottom:10px;}
 .maintit h3{width:120px;height:41px;line-height:41px;color:#FFF;float:left;padding-left:30px}

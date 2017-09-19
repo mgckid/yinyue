@@ -15,7 +15,8 @@
 <body>
 <style>
     body {
-        background: url("<?=$adList['home_big_bg'][0]['image_url']?>") #231A1B top center no-repeat
+        background: url("<?=$adList['home_big_bg'][0]['image_url']?>") #231A1B top center no-repeat;
+        background-size: 1440px auto;
     }
 </style>
 <?php $this->insert('Common/header') ?>
